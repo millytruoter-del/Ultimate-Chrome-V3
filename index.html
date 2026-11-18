@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#202124">
+<title>Ultimate Chrome V3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">✦</span><b>Ultimate Chrome V3</b></div>
+  <div class="tabs" id="tabs"></div>
+  <button class="new-tab" id="newTab" title="New tab">＋</button>
+  <div class="window-actions"><button title="Minimize">−</button><button title="Maximize">□</button><button title="Close">×</button></div>
+</header>
+<nav class="toolbar">
+  <button id="back" title="Back">‹</button><button id="forward" title="Forward">›</button><button id="reload" title="Reload">⟳</button><button id="home" title="Home">⌂</button>
+  <form id="addressForm"><span class="secure">◉</span><input id="address" autocomplete="off" spellcheck="false" placeholder="Search or enter a website address"><button type="submit">Go</button></form>
+  <button id="bookmark" title="Bookmark this page">☆</button><button id="history" title="Browsing history">◷</button>
+</nav>
+<main id="stage">
+  <section class="welcome" id="welcome">
+    <div class="hero-logo">✦</div><h1>Explore with <span>Ultimate Chrome V3</span></h1>
+    <p>A simple browser-style workspace for the web.</p>
+    <form id="searchForm" class="search"><span>⌕</span><input id="searchInput" placeholder="Search the web or enter an address"><button>Search</button></form>
+    <div class="shortcuts">
+      <button data-url="https://www.google.com"><span>G</span>Google</button>
+      <button data-url="https://www.wikipedia.org"><span>W</span>Wikipedia</button>
+      <button data-url="https://www.youtube.com"><span>▶</span>YouTube</button>
+      <button data-url="https://www.nasa.gov"><span>✧</span>NASA</button>
+    </div>
+    <p class="note">Some websites block embedding. Open those sites in a new browser tab instead.</p>
+  </section>
+  <section class="viewer hidden" id="viewer">
+    <div class="frame-note" id="frameNote">If this site does not load, it may block being shown inside another website.</div>
+    <iframe id="webview" title="Website view" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </section>
+  <section class="panel hidden" id="panel"></section>
+</main>
+<footer><span>✦ Ultimate Chrome V3</span><span>Websites control whether they allow embedding.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
